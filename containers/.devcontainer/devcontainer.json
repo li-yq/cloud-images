@@ -10,12 +10,17 @@
 		"ghcr.io/devcontainers/features/nix": {
 			"packages": "micromamba"
 		},
-		"ghcr.io/devcontainers/features/python": {},
-		"ghcr.io/rocker-org/devcontainer-features/r-apt": {},
-		"ghcr.io/devcontainers-contrib/features/pipx-package": {
-			"package": "dvc snakemake"
+		"ghcr.io/devcontainers/features/python": {
+			"installJupyterlab": true
 		},
-		"ghcr.io/rocker-org/devcontainer-features/quarto-cli": {},
+		"ghcr.io/rocker-org/devcontainer-features/r-apt:0": {
+			"vscodeRSupport": "full",
+			"installREnv": true
+		},
+		"ghcr.io/devcontainers-contrib/features/pipx-package": {
+			"package": "dvc snakemake radian"
+		},
+		"ghcr.io/rocker-org/devcontainer-features/quarto-cli": {}
 	},
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
