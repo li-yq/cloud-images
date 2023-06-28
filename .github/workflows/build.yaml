@@ -29,6 +29,8 @@ jobs:
       - name: Build and push container image
         uses: devcontainers/ci@v0.3
         with:
+          subFolder: containers
           imageName: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           cacheFrom: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          # imageTag: latest
           push: always
