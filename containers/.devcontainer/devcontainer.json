@@ -12,9 +12,8 @@
 		},
 		"ghcr.io/devcontainers/features/python": {},
 		"ghcr.io/rocker-org/devcontainer-features/r-apt": {},
-		"ghcr.io/iterative/features/dvc": {},
 		"ghcr.io/devcontainers-contrib/features/pipx-package": {
-			"package": "snakemake"
+			"package": "dvc snakemake"
 		},
 		"ghcr.io/rocker-org/devcontainer-features/quarto-cli": {},
 	},
