@@ -1,0 +1,20 @@
+{
+    "id": "snakemake",
+    "version": "0.0.1",
+    "name": "snakemake (via pipx)",
+    // "description": "snakemake",
+    "options": {
+        "version": {
+            "default": "latest",
+            "description": "Select the version to install.",
+            "proposals": [
+                "latest"
+            ],
+            "type": "string"
+        }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers-contrib/features/pipx-package",
+        "ghcr.io/devcontainers/features/python"
+    ]
+}

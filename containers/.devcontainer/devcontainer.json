@@ -17,9 +17,9 @@
 			"vscodeRSupport": "full",
 			"installREnv": true
 		},
-		"ghcr.io/devcontainers-contrib/features/pipx-package": {
-			"package": "dvc snakemake radian"
-		},
+		"./dvc":{},
+		"./snakemake":{},
+		"./radian":{},
 		"ghcr.io/rocker-org/devcontainer-features/quarto-cli": {}
 	},
 
