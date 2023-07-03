@@ -17,6 +17,7 @@
 			"vscodeRSupport": "full",
 			"installREnv": true
 		},
+		"ghcr.io/rocker-org/devcontainer-features/renv-cache:0": {},
 		"./dvc":{},
 		"./snakemake":{},
 		"./radian":{},
