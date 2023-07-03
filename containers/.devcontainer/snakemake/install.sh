@@ -16,7 +16,7 @@ $nanolayer_location \
     install \
     devcontainer-feature \
     "ghcr.io/devcontainers-contrib/features/pipx-package:1.1.6" \
-    --option package='snakemake' --option version="$VERSION" --option injections=pippy
+    --option package='snakemake' --option version="$VERSION" --option injections=peppy
     
 
 
