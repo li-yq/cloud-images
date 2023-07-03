@@ -1,0 +1,9 @@
+{
+    "id": "micromamba",
+    "version": "0.0.1",
+    "name": "micromamba",
+    "options": {},
+    "installsAfter": [
+        "ghcr.io/mamba-org/devcontainer-features/micromamba:1"
+    ]
+}
