@@ -8,7 +8,9 @@
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	"features": {
 		"ghcr.io/devcontainers/features/nix:1": {},
-		"./micromamba": {},
+		"ghcr.io/mamba-org/devcontainer-features/micromamba:1.2" : {
+			"autoActivate": false
+		},
 		"ghcr.io/devcontainers/features/python:1": {
 			"installJupyterlab": true
 		},
