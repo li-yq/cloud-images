@@ -17,7 +17,12 @@
 		"ghcr.io/rocker-org/devcontainer-features/r-apt:0": {
 			"vscodeRSupport": "full"
 		},
+		"ghcr.io/rocker-org/devcontainer-features/r-packages:1": {
+			"packages": "IRkernel,tidyverse",
+			"additionalRepositories": "CRAN = 'https://packagemanager.posit.co/cran/__linux__/jammy/latest'"
+		},
 		// "ghcr.io/rocker-org/devcontainer-features/renv-cache:0": {},
+		"./irkernel": {},
 		"./dvc": {},
 		"./snakemake": {},
 		"./radian": {},

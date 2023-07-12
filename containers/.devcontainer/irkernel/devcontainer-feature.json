@@ -1,0 +1,14 @@
+{
+    "id": "irkernel",
+    "version": "0.0.1",
+    "name": "register irkernel for jupyter",
+    // "description": "irkernel",
+    "options": {
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/python",
+        "ghcr.io/rocker-org/devcontainer-features/r-apt",
+        "ghcr.io/rocker-org/devcontainer-features/r-rig",
+        "ghcr.io/rocker-org/devcontainer-features/r-packages"
+    ]
+}
