@@ -16,6 +16,9 @@ jobs:
       contents: read
       packages: write
     steps:
+      - name: Get datetime
+        run: echo "NOW=$(date +'%Y%m%d.%H%M%S')" >> $GITHUB_ENV
+
       - name: Checkout repository
         uses: actions/checkout@v3
 
@@ -32,5 +35,5 @@ jobs:
           subFolder: containers
           imageName: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           cacheFrom: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
-          # imageTag: latest
+          imageTag: latest,${{ github.ref_name }}-${{ github.sha }},${{ github.ref_name }}-${{ env.NOW }}
           push: always
