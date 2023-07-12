@@ -37,7 +37,25 @@
 	// "postCreateCommand": "uname -a",
 
 	// Configure tool-specific properties.
-	// "customizations": {},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-toolsai.jupyter",
+				"esbenp.prettier-vscode",
+				"yzhang.markdown-all-in-one",
+				"jock.svg",
+				"redhat.vscode-xml",
+				"Snakemake.snakemake-lang",
+				"GitHub.copilot",
+				"mechatroner.rainbow-csv",
+				"esbenp.prettier-vscode",
+				"mhutchie.git-graph"
+			],
+			"settings": {
+				"terminal.integrated.defaultProfile.linux": "zsh",
+			}
+		}
+	},
 
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	"containerUser": "vscode",
