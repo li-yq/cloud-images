@@ -15,7 +15,7 @@
 		"ghcr.io/devcontainers/features/python:1": {
 			"installJupyterlab": true
 		},
-		"ghcr.io/rocker-org/devcontainer-features/r-apt:0": {
+		"ghcr.io/rocker-org/devcontainer-features/r-rig:1": {
 			"vscodeRSupport": "full"
 		},
 		"ghcr.io/rocker-org/devcontainer-features/r-packages:1": {
