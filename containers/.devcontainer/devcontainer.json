@@ -15,17 +15,14 @@
 			"installJupyterlab": true
 		},
 		"ghcr.io/rocker-org/devcontainer-features/r-rig:1": {
-			"vscodeRSupport": "full"
+			"vscodeRSupport": "full",
+			"installREnv": true,
+			"installJupyterlab": true,
+			"installRadian": true
 		},
-		"ghcr.io/rocker-org/devcontainer-features/r-packages:1": {
-			"packages": "IRkernel,tidyverse",
-			"additionalRepositories": "CRAN = 'https://packagemanager.posit.co/cran/__linux__/jammy/latest'"
-		},
-		// "ghcr.io/rocker-org/devcontainer-features/renv-cache:0": {},
-		"./irkernel": {},
+		"ghcr.io/rocker-org/devcontainer-features/renv-cache:0": {},
 		"./dvc": {},
 		"./snakemake": {},
-		"./radian": {},
 		"ghcr.io/rocker-org/devcontainer-features/quarto-cli:1": {}
 	},
 
