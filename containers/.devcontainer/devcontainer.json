@@ -23,6 +23,9 @@
 		"ghcr.io/rocker-org/devcontainer-features/renv-cache:0": {},
 		"./dvc": {},
 		"./snakemake": {},
+		"ghcr.io/devcontainers-contrib/features/apt-get-packages:1": {
+			"packages": "tmux,git-annex"
+		},
 		"ghcr.io/rocker-org/devcontainer-features/quarto-cli:1": {}
 	},
 
