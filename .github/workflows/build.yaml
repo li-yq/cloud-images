@@ -32,7 +32,7 @@ jobs:
       - name: Build and push container image
         uses: devcontainers/ci@v0.3
         with:
-          subFolder: containers
+          subFolder: base
           imageName: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           cacheFrom: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           imageTag: latest,${{ github.ref_name }}-${{ github.sha }},${{ github.ref_name }}-${{ env.NOW }}
