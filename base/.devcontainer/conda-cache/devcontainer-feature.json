@@ -1,0 +1,21 @@
+{
+	"name": "mamba cache",
+	"id": "mamba-cache",
+	"version": "0.1.1",
+	"description": "Set mamba cache to a Docker volume. Cache is shared by all containers.",
+	"options": {},
+	"containerEnv": {
+		"MAMBA_ROOT_PREFIX": "/mamba",
+		"MAMBA_ALLOW_SOFTLINKS": "true"
+	},
+	"mounts": [
+		{
+			"source": "devcontainer-mamba-cache",
+			"target": "/mamba/pkgs",
+			"type": "volume"
+		}
+	],
+	"installsAfter": [
+		"ghcr.io/mamba-org/devcontainer-features/micromamba"
+	]
+}

@@ -11,6 +11,7 @@
 			"channels": "conda-forge,bioconda",
 			"autoActivate": false
 		},
+		"./conda-cache": {},
 		"ghcr.io/devcontainers/features/python:1": {
 			"installJupyterlab": true
 		},
