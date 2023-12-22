@@ -21,7 +21,9 @@
 			"installBspm": true
 		},
 		"./dvc": {},
-		"./snakemake": {},
+		"./snakemake": {
+			"version": "7.32.4"
+		},
 		"ghcr.io/devcontainers-contrib/features/apt-get-packages:1": {
 			"packages": "tmux,git-annex"
 		},
