@@ -4,10 +4,9 @@
 	"name": "Ubuntu",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
 	"image": "mcr.microsoft.com/devcontainers/base:jammy",
-	
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	"features": {
-		"ghcr.io/mamba-org/devcontainer-features/micromamba:1.2" : {
+		"ghcr.io/mamba-org/devcontainer-features/micromamba:1.2": {
 			"channels": "conda-forge,bioconda",
 			"autoActivate": false
 		},
@@ -30,13 +29,10 @@
 		"ghcr.io/eitsupi/devcontainer-features/jq-likes:2.1.0": {},
 		"ghcr.io/rocker-org/devcontainer-features/quarto-cli:1": {}
 	},
-
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
-
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "uname -a",
-
 	// Configure tool-specific properties.
 	"customizations": {
 		"vscode": {
@@ -54,7 +50,6 @@
 			]
 		}
 	},
-
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	"containerUser": "vscode",
 	"remoteUser": "vscode"
