@@ -14,13 +14,12 @@
 		"ghcr.io/devcontainers/features/python:1": {
 			"installJupyterlab": true
 		},
-		"ghcr.io/rocker-org/devcontainer-features/r-rig:1": {
+		"ghcr.io/rocker-org/devcontainer-features/r-apt:1": {
 			"vscodeRSupport": "full",
-			"installREnv": true,
 			"installJupyterlab": true,
-			"installRadian": true
+			"installRadian": true,
+			"installBspm": true
 		},
-		"ghcr.io/rocker-org/devcontainer-features/renv-cache:0": {},
 		"./dvc": {},
 		"./snakemake": {},
 		"ghcr.io/devcontainers-contrib/features/apt-get-packages:1": {
