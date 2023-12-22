@@ -50,10 +50,7 @@
 				"mechatroner.rainbow-csv",
 				"esbenp.prettier-vscode",
 				"mhutchie.git-graph"
-			],
-			"settings": {
-				"terminal.integrated.defaultProfile.linux": "zsh",
-			}
+			]
 		}
 	},
 
