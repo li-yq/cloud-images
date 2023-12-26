@@ -1,0 +1,9 @@
+#!/command/with-contenv bash
+
+if [[ ! -x "$INIT_FILE" || -f /etc/init_finished ]] ; then
+    exit 0
+fi
+
+touch /etc/init_finished
+
+runuser vscode -l -- $INIT_FILE

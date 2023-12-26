@@ -1,0 +1,6 @@
+#!/command/execlineb -P
+
+runuser vscode -l -- -c "exec \"$@\"" -
+jupyter lab
+--no-browser
+/mnt
