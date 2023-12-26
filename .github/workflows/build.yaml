@@ -29,11 +29,14 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Build and push container image
-        uses: devcontainers/ci@v0.3
-        with:
-          subFolder: base
-          imageName: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
-          cacheFrom: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
-          imageTag: latest,${{ github.ref_name }}-${{ github.sha }},${{ github.ref_name }}-${{ env.NOW }}
-          push: always
+      - name: Build container image
+        run: docker build . --file Dockerfile --tag ${{ env.IMAGE_NAME }}
+
+      - name: Push image
+        run: |
+          IMAGE_ID=${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          VERSION=${{ github.sha }}-${{ env.NOW }}
+          echo IMAGE_ID=$IMAGE_ID
+          echo VERSION=$VERSION
+          docker tag $IMAGE_NAME $IMAGE_ID:$VERSION
+          docker push $IMAGE_ID:$VERSION
