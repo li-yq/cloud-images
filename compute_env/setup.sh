@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -ex
+
 export DEBIAN_FRONTEND=noninteractive
 export PIP_NO_CACHE_DIR=off
 export USE_EMOJI=false
@@ -109,3 +111,23 @@ curl -sLo "quarto.deb" "${download_url}"
 dpkg -i quarto.deb
 popd
 rm -rf /tmp/quarto
+
+########## GPU-drivers ##########
+
+mkdir -p /tmp/nvidia
+pushd /tmp/nvidia
+# curl -fSsl -O https://us.download.nvidia.com/tesla/525.125.06/NVIDIA-Linux-x86_64-525.125.06.run
+# sh NVIDIA-Linux-x86_64-525.125.06.run -q --dkms --no-cc-version-check
+
+wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/cuda-keyring_1.1-1_all.deb
+dpkg -i cuda-keyring_1.1-1_all.deb
+apt-get -y update
+# apt-get -y install cuda-toolkit
+apt-get -y install cuda-drivers
+
+popd
+rm -rf /tmp/nvidia
+
+
+# clean up
+apt-get -y clean
