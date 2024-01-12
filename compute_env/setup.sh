@@ -75,8 +75,8 @@ cat >/etc/profile.d/python.sh <<-EOF
 	export PIPX_HOME=${PIPX_HOME}
 	export PIPX_BIN_DIR=${PIPX_BIN_DIR}
 	export PIPX_MAN_DIR=${PIPX_MAN_DIR}
-	if [[ ":\$PATH:" != *":\${VENV_PREFIX}/bin:"* ]]; then export PATH=\${VENV_PREFIX}/bin:\${PATH}; fi
-	if [[ ":\$PATH:" != *":\$PIPX_BIN_DIR:"* ]]; then export PATH=\$PIPX_BIN_DIR:\${PATH}; fi
+	if [[ ":\$PATH:" != *":${VENV_PREFIX}/bin:"* ]]; then export PATH=${VENV_PREFIX}/bin:\${PATH}; fi
+	if [[ ":\$PATH:" != *":$PIPX_BIN_DIR:"* ]]; then export PATH=$PIPX_BIN_DIR:\${PATH}; fi
 EOF
 
 ########## R ##########
