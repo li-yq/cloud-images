@@ -25,7 +25,7 @@ micromamba config append --system channels conda-forge
 micromamba config append --system channels bioconda
 micromamba config set --system channel_priority strict
 
-cat >/etc/profile.d/mamba.sh  <<-EOF
+cat >/etc/profile.d/mamba.sh <<-EOF
 	export MAMBA_EXE='/usr/local/bin/micromamba';
 	export MAMBA_ROOT_PREFIX='${MAMBA_ROOT_PREFIX}';
 	__mamba_setup="\$("\$MAMBA_EXE" shell hook --shell bash --root-prefix "\$MAMBA_ROOT_PREFIX" 2> /dev/null)"
@@ -35,7 +35,7 @@ cat >/etc/profile.d/mamba.sh  <<-EOF
 		alias micromamba="\$MAMBA_EXE"  # Fallback on help from mamba activate
 	fi
 	unset __mamba_setup
-	if [[ ":\$PATH:" == *":\${MAMBA_ROOT_PREFIX}/bin:"* ]]; then export PATH=\${MAMBA_ROOT_PREFIX}/bin:\${PATH}; fi
+	if [[ ":\$PATH:" != *":\${MAMBA_ROOT_PREFIX}/bin:"* ]]; then export PATH=\${MAMBA_ROOT_PREFIX}/bin:\${PATH}; fi
 EOF
 
 # fix permission
@@ -71,12 +71,12 @@ ${VENV_PREFIX}/bin/ipython kernel install
 # fix permission
 chown -R 1000:users ${VENV_PREFIX} /opt/pipx
 
-cat >/etc/profile.d/python.sh  <<-EOF
+cat >/etc/profile.d/python.sh <<-EOF
 	export PIPX_HOME=${PIPX_HOME}
 	export PIPX_BIN_DIR=${PIPX_BIN_DIR}
 	export PIPX_MAN_DIR=${PIPX_MAN_DIR}
-	if [[ ":\$PATH:" == *":\${VENV_PREFIX}/bin:"* ]]; then export PATH=\${VENV_PREFIX}/bin:\${PATH}; fi
-	if [[ ":\$PATH:" == *":\$PIPX_BIN_DIR:"* ]]; then export PATH=\$PIPX_BIN_DIR:\${PATH}; fi
+	if [[ ":\$PATH:" != *":\${VENV_PREFIX}/bin:"* ]]; then export PATH=\${VENV_PREFIX}/bin:\${PATH}; fi
+	if [[ ":\$PATH:" != *":\$PIPX_BIN_DIR:"* ]]; then export PATH=\$PIPX_BIN_DIR:\${PATH}; fi
 EOF
 
 ########## R ##########
