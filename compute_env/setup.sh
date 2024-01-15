@@ -128,5 +128,7 @@ pipx install dvc[gs]
 pip install torch
 micromamba install -y -n base seqkit csvtk
 
+chown -R 1000:users /opt/conda /opt/venv /opt/pipx
+
 # clean up
 apt-get -y clean
