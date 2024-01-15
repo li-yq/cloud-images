@@ -117,6 +117,11 @@ apt-get -y install cuda-drivers
 popd
 rm -rf /tmp/nvidia
 
+########## tools ##########
+
+pipx install dvc[gs]
+pip install torch
+micromamba install -y -n base seqkit csvtk
 
 # clean up
 apt-get -y clean
