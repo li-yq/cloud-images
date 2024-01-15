@@ -49,6 +49,12 @@ apt-get -y install --no-install-recommends python3 python3-doc python3-pip pytho
 VENV_PREFIX=/opt/venv
 python3 -m venv ${VENV_PREFIX}
 
+export PIPX_HOME=/opt/pipx
+export PIPX_BIN_DIR="${PIPX_HOME}/bin"
+export PIPX_MAN_DIR="${PIPX_HOME}/share/man"
+
+export PATH=$PIPX_BIN_DIR:${VENV_PREFIX}/bin:${PATH}
+
 # install jupyter
 pipx install jupyter-core
 pipx inject jupyter-core --include-apps jupytext jupyterlab
@@ -57,7 +63,6 @@ jupyter kernelspec remove -y python3
 ${VENV_PREFIX}/bin/ipython kernel install
 
 # fix permission
-mkdir /opt/pipx
 chown -R 1000:users ${VENV_PREFIX} /opt/pipx
 
 cat >/etc/profile.d/python.sh <<-EOF
